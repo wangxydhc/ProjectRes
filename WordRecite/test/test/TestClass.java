@@ -23,7 +23,8 @@ public class TestClass {
 
 
 	@Test
-	public void testSchemaExport() throws Throwable{
+	public void testSchemaExport() throws Throwable
+	{
 //		new SchemaExport(new AnnotationConfiguration().configure()).create(true, true);
 		Session s=sf.openSession();
 		Transaction tx=s.beginTransaction();

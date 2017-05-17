@@ -17,9 +17,9 @@
 		org.hibernate.cache.NoCacheProvider
 	</property>
 	<property name="dialect">
-		org.hibernate.dialect.MySQLDialect
+		tools.MySQLDialectUTF8
 	</property>
-	<mapping class="model.ProNode" />
+	<mapping class="model.ReciteLog" />
 	<mapping class="model.Word" />	
 </session-factory>
 

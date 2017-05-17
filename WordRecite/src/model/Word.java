@@ -1,9 +1,13 @@
 package model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 @Entity
 public class Word {
@@ -12,20 +16,12 @@ public class Word {
 	private int id;
 	private String state;
 	private int remTimes;
-	private ProNode proNode;
+	private Set<ReciteLog> log=new HashSet<ReciteLog>();
 	public Word(int time,String word,String paraphrase,String state){
 		this.word=word;
 		this.paraphrase=paraphrase;
 		this.state=state;
 		this.remTimes=time;
-	}
-	@OneToOne
-	@JoinColumn(name="ProNodeId")
-	public ProNode getProNode() {
-		return proNode;
-	}
-	public void setProNode(ProNode proNode) {
-		this.proNode = proNode;
 	}
 	@Id
 	@GeneratedValue
@@ -58,6 +54,14 @@ public class Word {
 	}
 	public void setWord(String word) {
 		this.word = word;
+	}
+	@OneToMany
+	@JoinColumn(name="log")
+	public Set<ReciteLog> getLog() {
+		return log;
+	}
+	public void setLog(Set<ReciteLog> log) {
+		this.log = log;
 	}
 
 }
