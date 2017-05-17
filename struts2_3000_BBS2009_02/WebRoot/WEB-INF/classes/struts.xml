@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	
+ 
+	<!--  
+	<package name="bbs2016_default" extends="struts-default">
+		 <global-exception-mappings>
+    		<exception-mapping result="exception_handle" exception="Exception"></exception-mapping>
+    	</global-exception-mappings>
+	</package>
+	-->
+	<!--  
+    <package name="admin" namespace="/admin" extends="bbs2016_default" >
+   <default-action-ref name="Category_list"></default-action-ref>
+    <action name="Category_list" class="com.xy.bbs2016.action.CategoryAction" method="list">
+       		<result>/index.jsp</result>
+       </action>
+       <action name="*_*" class="com.xy.bbs2016.action.{1}Action" method="{2}">
+       		<result>/admin/{1}_{2}.jsp</result>
+       		<result name="input">/admin/{1}_input.jsp</result>
+       		
+       		<result name="exception_handle">/admin/exception.jsp</result>
+       </action>
+    </package>
+    -->
+        <package name="front"  namespace="/" extends="struts-default" >    
+       <action name="Category_list" class="com.xy.bbs2016.action.CategoryAction" method="list">
+       		<result>/index.jsp</result>
+       </action>
+    </package>
+    <package name="admin"  namespace="/admin" extends="struts-default" >    
+       <action name="Category_list" class="com.xy.bbs2016.action.CategoryAction" method="list">
+       		<result>/admin/index.html</result>
+       </action>
+    </package>
+    
+     
+</struts>

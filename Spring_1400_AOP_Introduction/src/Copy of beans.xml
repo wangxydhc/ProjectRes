@@ -1,0 +1,7 @@
+<beans>
+	<bean id="u" class="com.bjsxt.dao.impl.UserDAOImpl3" />
+	<bean id="v" class="com.bjsxt.dao.impl.UserDAOImpl2" />
+	<bean id="userService" class="com.bjsxt.service.UserService">
+		<property name="userDAO"   bean="u"/>
+	</bean>
+</beans>
