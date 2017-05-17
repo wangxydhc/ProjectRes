@@ -1,10 +1,10 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-  <head>    
+  <head>
+    
     <title>My JSP 'index.jsp' starting page</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -15,11 +15,9 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
   </head>
-  <body>
-  <s:form action="ShowWords" method="post">
-		<s:textfield name="nums" label="本次单词数量" />
-		<s:submit value="提交"/>
-	</s:form>	
-	<s:debug></s:debug>
+  
+  <body>  
+<s:property value="res.{word}"/> 
+<s:debug></s:debug>
   </body>
 </html>
