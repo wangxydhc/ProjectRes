@@ -36,7 +36,6 @@ public class ShowWords extends ActionSupport{
 		Transaction tx = s.beginTransaction();
 		Random rd = new Random();
 		int id = rd.nextInt(2000)+1;
-		System.out.println("dsafdsaf"+nums+"derf");
 		Word w=new Word();
 		while (nums-- > 0) {		
 			 w= (Word) s.get(Word.class, id);

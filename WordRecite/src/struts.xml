@@ -4,6 +4,9 @@
    <package name="front"  namespace="" extends="struts-default" >    
        <action name="ShowWords" class="action.ShowWords" method="start">
        		<result name="SUCCESS">/reciting.jsp</result>
-       		</action>
-       		</package>
+       	</action>
+       <action name="ConfirmWord" class="action.ConfirmWord" method="excute">
+       		<result name="SUCCESS">/reciting.jsp</result>
+       	</action>
+   </package>
 </struts>    

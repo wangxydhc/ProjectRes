@@ -17,7 +17,30 @@
   </head>
   
   <body>  
-<s:property value="res.{word}"/> 
+  
+  
+  
+  
+  <s:iterator value="res" id="list">
+ <td> 	
+ <s:form action="ConfirmWord" method="post">
+ 		<input type="hidden" name="wordId" value="<s:property value='#list.getId()'/>"/>
+ 		  单词：<s:property value="#list.getWord()" />
+ 		  <br/>
+  	                释义：<s:property value="#list.getParaphrase()"/>
+  	    <s:radio name="handle" list="{'完全不会','有点儿印象','基本掌握','太简单了'}" value="{}"/>
+  	<!-- <s:checkboxlist name="list" list="{'完全不会','有点儿印象','基本掌握','太简单了'}" value="{}"></s:checkboxlist> -->
+  <!--  <s:select name="user.sex" list="#{'0':'男','1':'女'}" label="性别" headerKey="" headerValue="请选择性别"></s:select>-->	
+  	<br/>
+  	<br/>
+  	<s:submit value="提  交"/>
+  	</s:form>
+  	</td>
+  	<td/>
+  </s:iterator>
+  
+  
+<!--<s:property value="res.{word}"/>   -->
 <s:debug></s:debug>
   </body>
 </html>
