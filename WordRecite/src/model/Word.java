@@ -1,5 +1,6 @@
 package model;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,6 +18,8 @@ public class Word {
 	private String state;
 	private int remTimes;
 	private Set<ReciteLog> log=new HashSet<ReciteLog>();
+	public Word(){		
+	};
 	public Word(int time,String word,String paraphrase,String state){
 		this.word=word;
 		this.paraphrase=paraphrase;

@@ -14,11 +14,14 @@ import org.junit.Test;
 
 import preDo.GetBook;
 
-public class TestClass {
+public  class TestClass {
 	private static SessionFactory sf=null;
-	@BeforeClass
+	
 	public static void beforeclass(){
 		sf=new AnnotationConfiguration().configure().buildSessionFactory();
+	}
+	public static Session getSession(){
+		return sf.openSession();
 	}
 
 
