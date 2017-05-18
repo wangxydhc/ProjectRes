@@ -17,9 +17,8 @@
   </head>
   <body>
   <s:form action="ShowWords" method="post">
-		<s:textfield name="nums" label="本次单词数量" />
+		<s:textfield name="nums" value="" label="本次单词数量" />
 		<s:submit value="提交"/>
 	</s:form>	
-	<s:debug></s:debug>
   </body>
 </html>
