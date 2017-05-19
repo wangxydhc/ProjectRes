@@ -8,6 +8,9 @@ import javax.persistence.Id;
 @Entity
 public class ReciteLog {
 	private int id;
+	public ReciteLog(){
+		
+	}
 	@Id
 	@GeneratedValue
 	public int getId() {

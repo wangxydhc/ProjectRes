@@ -6,7 +6,7 @@
        		<result name="SUCCESS">/reciting.jsp</result>
        	</action>
        <action name="ConfirmWord" class="action.ConfirmWord" method="excute">
-       		<result name="SUCCESS">/reciting.jsp</result>
+       		<result name="SUCCESS">/show.jsp</result>
        	</action>
    </package>
 </struts>    

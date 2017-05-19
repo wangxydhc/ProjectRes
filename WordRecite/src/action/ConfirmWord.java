@@ -32,6 +32,7 @@ public class ConfirmWord extends ActionSupport{
 		this.wordId = wordId;		
 	}
 	public String excute(){
+		System.out.println(handle+"&&&&&"+wordId);
 		Factory.beforeclass();
 		Session s = Factory.getSessionFactory().openSession();
 		Transaction tx = s.beginTransaction();
